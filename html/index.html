@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <link rel='shortcut icon' href='../imgs/cat.png' type='image/x-icon' sizes="16x16" />
+    <!-- ================== ESTILOS CSS ================== -->
+    <link href="../plugins/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/mis_estilos.css" rel="stylesheet"/>
+    <link href="../plugins/DataTables-1.10.22/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <style>
+
+    </style>
+
+    <!-- ================== SCRIPTS JS ================== -->
+    <script src="../plugins/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="../plugins/bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../plugins/DataTables-1.10.22/js/jquery.dataTables.min.js"></script>
+
+    <title>J.Alejandro.H</title>
+</head>
+<body>
+<font face="Lucida Bright">
+<h1 align="center">Evidencia HTML</h1>
+</font>
+
+<div class="row">
+    <div class="col-6">
+        <div>
+        <div>
+        <a href="index2.html"><button style="width: 21%" class="btn btn-success">Inicio </button></a>
+        <button style="width: 19%" class="btn btn-info">Informacion</button>
+        <button style="width: 19%" class="btn btn-warning">Advertencia</button>
+        <button style="width: 19%" class="btn btn-danger">Peligro</button>
+        <button style="width: 19%" class="btn btn-primary">Error</button>
+        </div>
+ <div>
+    <form action="action_page.php" style="border:1px solid #ccc">
+            <div class="container">
+                <h1 align="center">Registrarse</h1>
+                <p align="center">Por favor diligencie este formulario.</p>
+                <hr>
+
+                <div class="form-grup">
+                <label for="email"><b>Email</b></label>
+                <input type="text" class="form-control" placeholder="Enter Email" id="email" required>
+                </div>
+
+                <div class="form-grup">
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" class="form-control" placeholder="Enter Password" id="psw" required>   
+                </div>
+
+                <div class="form-grup">
+                <label for="psw-repeat"><b>Verifica Contraseña</b></label>
+                <input type="password" class="form-control" placeholder="Repeat Password" id="psw-repeat" required>  
+                <br>
+                </div>
+
+                <div class="form-grup">
+                <label>
+                <input type="checkbox" class="form-control" checked="checked" id="remember" style="margin-bottom:20px"> Rrecuerdame 
+                </label>   
+                </div>
+          
+                <p>Creando una nueva cuenta <a href="#" style="color:dodgerblue">Terminos y Condiciones</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" class="btn btn-success">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+    </div>
+
+    <div class="col-6">
+        <div>
+        <table class="table datatable" id="data_table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Ciudad</th>
+                <th>País</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Ciudad</th>
+                <th>País</th>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td align="center">1</td>
+                <td><button>Pedro</button></td>
+                <td style="background-color: #679dc6">Pérez</td>
+                <td>Cali</td>
+                <td>Colombia</td>
+            </tr>
+            <tr>
+                <td align="center">2</td>
+                <td><b>Camila</b></td>
+                <td>Gómez</td>
+                <td>Bogotá</td>
+                <td>Colombia</td>
+            </tr>
+            <tr>
+                <td align="center">3</td>
+                <td><b>Jhon</b></td>
+                <td>Velasco</td>
+                <td>Lima</td>
+                <td>Perú</td>
+            </tr>
+            </tbody>
+        </table> 
+    </div> 
+    </div>
+    
+
+
+    
+        
+    
+
+<!-- ================== SCRIPTS JS ================== -->
+<script>
+$(document).ready( function () {
+    $('#data_table').DataTable({
+        //para cambiar el lenguaje a español
+        "language": {
+            "lengthMenu": "Mostrar _MENU_ registros",
+            "zeroRecords": "No se encontraron resultados",
+            "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+            "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+            "sSearch": "Buscar:",
+            "oPaginate": {
+                "sFirst": "Primero",
+                "sLast":"Último",
+                "sNext":"Siguiente",
+                "sPrevious": "Anterior"
+            },
+            "sProcessing":"Procesando...",
+        }
+    });
+});
+</script>
+</body>
+</html>
